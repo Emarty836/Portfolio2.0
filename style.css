@@ -60,23 +60,23 @@ body{
 }
 
 .project-grid > div:nth-child(1){
-    background-image:url('images/calculator2.png');
+    background-image:url('calculator2.png');
 }
 
 .project-grid > div:nth-child(2){
-    background-image:url('images/dota2roster2.png');
+    background-image:url('dota2roster2.png');
 }
 
 .project-grid > div:nth-child(3){
-    background-image:url('images/flicks.png');
+    background-image:url('flicks.png');
 }
 
 .project-grid > div:nth-child(4){
-    background-image:url('images/captureUntitled.png');
+    background-image:url('captureUntitled.png');
 }
 
 .project-grid > div:nth-child(5){
-    background-image:url('images/pokegen2.png');
+    background-image:url('pokegen2.png');
 }
 
 .project-grid > div:hover{
@@ -135,23 +135,23 @@ h2{
 }
 
 #P1 > .pLeft{
-    background-image:url('images/calculator2.png');
+    background-image:url('calculator2.png');
 }
 
 #P2 > .pLeft{
-    background-image:url('images/dota2roster2.png');
+    background-image:url('dota2roster2.png');
 }
 
 #P3 > .pLeft{
-    background-image:url('images/flicks.png');
+    background-image:url('flicks.png');
 }
 
 #P4 > .pLeft{
-    background-image:url('images/captureUntitled.png');
+    background-image:url('captureUntitled.png');
 }
 
 #P5 > .pLeft{
-    background-image:url('images/pokegen2.png');
+    background-image:url('pokegen2.png');
 }
 
 .pLeft{
