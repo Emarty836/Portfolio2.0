@@ -1,5 +1,7 @@
 *{
     color:black;
+    margin:0;
+    padding:0;
 }
 
 @keyframes preview{
@@ -16,11 +18,61 @@
 }
 
 body{
+    
+    margin:0;
+    padding:0;
+}
+
+/*------------------------------------- Intro -------------------------------*/
+
+.intro-div{
+    width:100%;
+    height:700px;
+    /*background-color: rgb(182, 196, 241);*/
+    background-color: rgb(236, 239, 250);
+    margin:0;
+}
+
+.intro{
+    position:absolute;
+    width:700px;
+    height:400px;
+   /*border:dashed 1px black;*/
+    top:20%;
+    left:10%;
+}
+
+.intro > h1{
+    font-size:50px;
+    border-right-style:solid;
+    border-right-color:black;
+    border-right-width:5px;
+    height:80px;
+    
+    padding-top:20px;
+}
+
+.intro > h2{
+    font-size:25px;
+}
+/*-------------------------------------------------Projects ------------------------------*/
+.projects{
     background-color: rgb(17, 26, 50);
+    
+}
+
+.projects > h2{
+    text-align:center;
+    color:white;
+    font-size:50px;
+    text-transform:uppercase;
+    text-shadow:10px 10px 100px black;
+    padding:40px;
+    
 }
 
 .project-grid{
-    width:850px;
+    width:950px;
     height:830px;
     margin:0 auto;
     display:grid;
@@ -30,10 +82,8 @@ body{
 }
 
 .projectBanner{
-    color:red;
     background:blue;
     text-align:left;
-    padding-left:10px;
     font-size:20px;
     width:100%;
     font-family:Arial;
@@ -42,11 +92,21 @@ body{
     height:50px;
     visibility:hidden;
     position:Absolute;
+    border-bottom-color:black;
+    border-bottom-style:solid;
+    border-bottom-width:3px;
+    
+}
+
+.projectBanner > p{
+    padding-left:10px;
+    color:rgb(211, 208, 208);
+    padding-top:20px;
 }
 
 .project-grid > div:hover .projectBanner{
     visibility:visible;
-    background:white;
+    background:rgba(11, 25, 56, 0.85);
 }
 
 
@@ -57,26 +117,27 @@ body{
     background:rgb(152, 0, 0);
     background-size: contain; 
     position:relative;
+    box-shadow:2px 2px 10px 0 black;
 }
 
 .project-grid > div:nth-child(1){
-    background-image:url('calculator2.png');
+    background-image:url('images/calculator2.png');
 }
 
 .project-grid > div:nth-child(2){
-    background-image:url('dota2roster2.png');
+    background-image:url('images/dota2roster2.png');
 }
 
 .project-grid > div:nth-child(3){
-    background-image:url('flicks.png');
+    background-image:url('images/flicks.png');
 }
 
 .project-grid > div:nth-child(4){
-    background-image:url('captureUntitled.png');
+    background-image:url('images/captureUntitled.png');
 }
 
 .project-grid > div:nth-child(5){
-    background-image:url('pokegen2.png');
+    background-image:url('images/pokegen2.png');
 }
 
 .project-grid > div:hover{
@@ -84,10 +145,7 @@ body{
 }
 
 
-h2{
-    text-align:center;
-    color:white;
-}
+
 
 .view{
     position:relative;
@@ -135,23 +193,24 @@ h2{
 }
 
 #P1 > .pLeft{
-    background-image:url('calculator2.png');
+    background-image:url('images/calculator2.png');
 }
 
 #P2 > .pLeft{
-    background-image:url('dota2roster2.png');
+    background-image:url('images/dota2roster2.png');
 }
 
 #P3 > .pLeft{
-    background-image:url('flicks.png');
+    background-image:url('images/flicks.png');
 }
 
 #P4 > .pLeft{
-    background-image:url('captureUntitled.png');
+    background-image:url('images/captureUntitled.png');
+    background-size: 100% 100%;
 }
 
 #P5 > .pLeft{
-    background-image:url('pokegen2.png');
+    background-image:url('images/pokegen2.png');
 }
 
 .pLeft{
@@ -174,14 +233,13 @@ h2{
 .link-flex{
     display:flex;
     position:absolute;
-    bottom:10px;
+    bottom:25px;
     width:100%;
     justify-content:space-around;
     margin:0 auto;
 }
 
 .link-flex > a > div{
-    border: 1px solid white;
     width:100%;
     height:25px;
     font-size:1vw;
@@ -190,5 +248,68 @@ h2{
 
 .link-flex > a{
     text-decoration:none;
+    font-weight:bold;
+    text-transform:uppercase;
 }
+
+.site{
+    background:rgb(139, 134, 134);
+    box-shadow:2px 2px 5px black;
+    padding:5px 10px;
+}
+
+.github{
+    background:black;
+    box-shadow:2px 2px 5px rgb(139, 134, 134);
+    color:white;
+    padding:5px 10px;
+}
+
+/*-----------------------------------------------Post Projects 1 -----------------------------------------------------*/
+
+.post-projects1{
+    width:100%;
+    height:700px;
+    background-color: rgb(236, 239, 250);
+    
+}
+
+
+/*--------------------------------------------------------------------  Social Links  ---------------------------------------------------------------------*/
+.social{
+    
+    position:fixed;
+    left:0;
+    top:50%;
+    transform:translateY(-70%);
+    height:200px;
+    width:45px;
+    display:grid;
+    grid-template-rows:1fr 1fr 1fr 1fr;
+    grid-template-columns:1fr;
+}
+
+.social > div{
+}
+
+.social > div:nth-child(1){
+    background:black;
+    
+    color:white;
+}
+
+.social > div:nth-child(2){
+    background:rgb(36, 101, 199);
+    
+}
+
+.social > div:nth-child(3){
+    background:red;
+    
+}
+
+.social > div:nth-child(4){
+    background:white;
+}
+
 
