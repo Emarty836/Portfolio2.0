@@ -1,0 +1,194 @@
+*{
+    color:black;
+}
+
+@keyframes preview{
+    from{
+        width:20%;
+        height:20%;
+        opacity:.4;
+    }
+    to{
+        width:57%;
+        height:60%;
+        opacity:1;
+    }
+}
+
+body{
+    background-color: rgb(17, 26, 50);
+}
+
+.project-grid{
+    width:850px;
+    height:830px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:30px;
+    grid-template-rows:250px 250px 250px;
+}
+
+.projectBanner{
+    color:red;
+    background:blue;
+    text-align:left;
+    padding-left:10px;
+    font-size:20px;
+    width:380px;
+    font-family:Arial;
+    padding:0px;
+    line-height:10px;
+    height:50px;
+    visibility:hidden;
+    position:Absolute;
+}
+
+.project-grid > div:hover .projectBanner{
+    visibility:visible;
+    background:white;
+}
+
+
+.project-grid > div{
+    border:2px solid black;
+    border-radius:5px;
+    width:100%;
+    background:rgb(152, 0, 0);
+    background-size: contain; 
+    position:relative;
+}
+
+.project-grid > div:nth-child(1){
+    background-image:url('images/calculator2.png');
+}
+
+.project-grid > div:nth-child(2){
+    background-image:url('images/dota2roster2.png');
+}
+
+.project-grid > div:nth-child(3){
+    background-image:url('images/flicks.png');
+}
+
+.project-grid > div:nth-child(4){
+    background-image:url('images/captureUntitled.png');
+}
+
+.project-grid > div:nth-child(5){
+    background-image:url('images/pokegen2.png');
+}
+
+.project-grid > div:hover{
+    border-color:white;
+}
+
+
+h2{
+    text-align:center;
+    color:white;
+}
+
+.view{
+    position:relative;
+    top:200px;
+    border:2px solid black;
+    margin:0 auto;
+    background:white;
+    cursor:pointer;
+    border-radius:2px;
+    width:180px;
+    height:25px;
+    text-align:center;
+    font-size:20px;
+    text-transform: uppercase;
+}
+
+.preview{
+    position:fixed;
+    display:flex;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    border:solid 1px black;
+    background:grey;
+    width:57%;
+    height:60%;
+    visibility:hidden;
+}
+
+.reveal{
+    animation-name:preview;
+    animation-duration:.3s;
+    animation-timing-function:ease-in;
+    visibility:visible;
+}
+
+
+.xBox{
+    position:absolute;
+    background:black;
+    width:20px;
+    height:20px;
+    margin:5px;
+    right:0;
+}
+
+#P1 > .pLeft{
+    background-image:url('images/calculator2.png');
+}
+
+#P2 > .pLeft{
+    background-image:url('images/dota2roster2.png');
+}
+
+#P3 > .pLeft{
+    background-image:url('images/flicks.png');
+}
+
+#P4 > .pLeft{
+    background-image:url('images/captureUntitled.png');
+}
+
+#P5 > .pLeft{
+    background-image:url('images/pokegen2.png');
+}
+
+.pLeft{
+    width:63%;
+    background:rgb(91, 30, 30);
+    background-size: 150% 100%;
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+}
+
+.pRight{
+    width:37%;
+    position:relative;
+    background-color: rgb(69, 80, 142);
+}
+.pRight>*{
+    text-align:left;   
+}
+
+.link-flex{
+    display:flex;
+    position:absolute;
+    bottom:10px;
+    width:100%;
+    justify-content:space-around;
+    margin:0 auto;
+}
+
+.link-flex > a > div{
+    border: 1px solid white;
+    width:100%;
+    height:25px;
+    font-size:1vw;
+    text-align:center;
+}
+
+.link-flex > a{
+    text-decoration:none;
+}
+
