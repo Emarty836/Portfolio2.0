@@ -1,315 +1,414 @@
-*{
-    color:black;
-    margin:0;
-    padding:0;
-}
-
-@keyframes preview{
-    from{
-        width:20%;
-        height:20%;
-        opacity:.4;
-    }
-    to{
-        width:57%;
-        height:60%;
-        opacity:1;
-    }
-}
-
 body{
-    
-    margin:0;
+    background:black;
+    margin: auto 0;
+}
+
+#projectTitle{
+    font-size:40px;
+  }
+  
+  #titleBar{
+    color:white;
+    width:100%;
+    height:180px;  /* Height of Navbar --------------------------------------*/
+    background: rgb(95, 0, 0);
+    margin:auto 0;
+    margin-top:-20px;
     padding:0;
+    text-align: center;
+    text-transform: uppercase;
+    position:fixed;
+    z-index:9;
+  }
+
+
+  
+  #purpose{
+    display:flex;
+    justify-content:space-around;
+    padding:0;
+  }
+
+  #lower{
+    text-transform: capitalize;
+        position:absolute;
+        top:115px;
+        width:90%;
+        left:50%;
+        transform:translateX(-50%);
+  }
+
+  /* --------------------------------------------------------------------- Roster section ------------------------------------------------------------------*/
+
+  .heroRoster{
+    position:relative;
+    top:200px;  /*   Hero section distance from top --------------------------*/
+  }
+
+.strength, .agilities, .intelligence{
+    margin:20px auto;
+    width:1430px;
+    height:650px;
+    display:grid;
+    grid-template-columns:100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
+    grid-template-rows:140px 140px 140px 140px;
+    gap:20px;
+    padding:15px;
+    /*border:solid 1px white;  ----- for sizing width purposes*/
+    margin-bottom:60px;
 }
 
-/*------------------------------------- Intro -------------------------------*/
 
-.intro-div{
+.strength > .frame > p{
+    background:rgb(90, 7, 7);
+}
+
+.agilities > .frame > p{
+    background:rgb(24, 102, 24);
+}
+
+
+.intelligence > .frame > p{
+    background:rgb(9, 103, 119);
+}
+
+
+p{
     width:100%;
-    height:700px;
-    /*background-color: rgb(182, 196, 241);*/
-    background-color: rgb(236, 239, 250);
+    height:40px;
+    color:white;
+    text-align:center;
+    font-family:arial;
+    margin:0;
+    margin-top:-5px;
+    padding-top:2px;
+}
+
+
+
+img{
+    width:100px;
+    height:100px; /* can adjust to cover text*/
     margin:0;
 }
-
-.intro{
-    position:absolute;
-    width:700px;
-    height:400px;
-   /*border:dashed 1px black;*/
-    top:20%;
-    left:10%;
-}
-
-.intro > h1{
-    font-size:50px;
-    border-right-style:solid;
-    border-right-color:black;
-    border-right-width:5px;
-    height:80px;
+.frame{
     
-    padding-top:20px;
+    width:100px;
+    height:140px;  /*---*/
+    border:solid 2px white;
 }
 
-.intro > h2{
-    font-size:25px;
-}
-/*-------------------------------------------------Projects ------------------------------*/
-.projects{
-    background-color: rgb(17, 26, 50);
+/* ----------------------------------------------------------------------------------- Button ----------------------------------------------------------------*/
+.buttonSet{
     
-}
-
-.projects > h2{
-    text-align:center;
-    color:white;
-    font-size:50px;
-    text-transform:uppercase;
-    text-shadow:10px 10px 100px black;
-    padding:40px;
-    
-}
-
-.project-grid{
-    width:950px;
-    height:830px;
-    margin:0 auto;
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:30px;
-    grid-template-rows:250px 250px 250px;
-}
-
-.projectBanner{
-    background:blue;
-    text-align:left;
-    font-size:20px;
-    width:100%;
-    font-family:Arial;
-    padding:0px;
-    line-height:10px;
+    width:110px;
     height:50px;
-    visibility:hidden;
-    position:Absolute;
-    border-bottom-color:black;
-    border-bottom-style:solid;
-    border-bottom-width:3px;
-    
-}
-
-.projectBanner > p{
-    padding-left:10px;
-    color:rgb(211, 208, 208);
-    padding-top:20px;
-}
-
-.project-grid > div:hover .projectBanner{
-    visibility:visible;
-    background:rgba(11, 25, 56, 0.85);
-}
-
-
-.project-grid > div{
-    border:2px solid black;
-    border-radius:5px;
-    width:100%;
-    background:rgb(152, 0, 0);
-    background-size: contain; 
-    position:relative;
-    box-shadow:2px 2px 10px 0 black;
-}
-
-.project-grid > div:nth-child(1){
-    background-image:url('calculator2.png');
-}
-
-.project-grid > div:nth-child(2){
-    background-image:url('dota2roster2.png');
-}
-
-.project-grid > div:nth-child(3){
-    background-image:url('flicks.png');
-}
-
-.project-grid > div:nth-child(4){
-    background-image:url('captureUntitled.png');
-}
-
-.project-grid > div:nth-child(5){
-    background-image:url('pokegen2.png');
-}
-
-.project-grid > div:hover{
-    border-color:white;
-}
-
-
-
-
-.view{
-    position:relative;
-    top:200px;
-    border:2px solid black;
-    margin:0 auto;
-    background:white;
-    cursor:pointer;
-    border-radius:2px;
-    width:180px;
-    height:25px;
-    text-align:center;
-    font-size:20px;
-    text-transform: uppercase;
-}
-
-.preview{
-    position:fixed;
-    display:flex;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    border:solid 1px black;
     background:grey;
-    width:57%;
-    height:60%;
-    visibility:hidden;
-}
-
-.reveal{
-    animation-name:preview;
-    animation-duration:.3s;
-    animation-timing-function:ease-in;
-    visibility:visible;
-}
-
-
-.xBox{
-    position:absolute;
-    background:black;
-    width:20px;
-    height:20px;
-    margin:5px;
-    right:0;
-}
-
-#P1 > .pLeft{
-    background-image:url('calculator2.png');
-}
-
-#P2 > .pLeft{
-    background-image:url('dota2roster2.png');
-}
-
-#P3 > .pLeft{
-    background-image:url('flicks.png');
-}
-
-#P4 > .pLeft{
-    background-image:url('captureUntitled.png');
-    background-size: 100% 100%;
-}
-
-#P5 > .pLeft{
-    background-image:url('pokegen2.png');
-}
-
-.pLeft{
-    width:63%;
-    background:rgb(91, 30, 30);
-    background-size: 150% 100%;
-    background-repeat:no-repeat;
-    background-position:50% 50%;
-}
-
-.pRight{
-    width:37%;
-    position:relative;
-    background-color: rgb(69, 80, 142);
-}
-.pRight>*{
-    text-align:left;   
-}
-
-.link-flex{
     display:flex;
-    position:absolute;
-    bottom:25px;
-    width:100%;
-    justify-content:space-around;
-    margin:0 auto;
-}
-
-.link-flex > a > div{
-    width:100%;
-    height:25px;
-    font-size:1vw;
-    text-align:center;
-}
-
-.link-flex > a{
-    text-decoration:none;
-    font-weight:bold;
-    text-transform:uppercase;
-}
-
-.site{
-    background:rgb(139, 134, 134);
-    box-shadow:2px 2px 5px black;
-    padding:5px 10px;
-}
-
-.github{
-    background:black;
-    box-shadow:2px 2px 5px rgb(139, 134, 134);
+    justify-content:space-between;
+    position:relative;
+    align-items:center;
     color:white;
-    padding:5px 10px;
+    font-family:arial;
+    top:10px;
+    z-index:1;
+    margin-top:80px;
 }
 
-/*-----------------------------------------------Post Projects 1 -----------------------------------------------------*/
+.switch{
+    width:60px;
+    height:40px;
+  }
 
-.post-projects1{
-    width:100%;
-    height:700px;
-    background-color: rgb(236, 239, 250);
-    
+#on{
+    background:rgb(26, 92, 26);
+    width:50px;
+    height:50px;
 }
 
+#off{
+    background:rgb(157, 8, 8);
+    width:50px;
+    height:50px;
+}
 
-/*--------------------------------------------------------------------  Social Links  ---------------------------------------------------------------------*/
-.social{
-    
+/*---------------------------------------  filters ----------------------------------------------------------------------------------------------*/
+
+.carry{
+    opacity:.2;
+}
+
+.buttonSet, .filters{
     position:fixed;
-    left:0;
-    top:50%;
-    transform:translateY(-70%);
-    height:200px;
-    width:45px;
-    display:grid;
-    grid-template-rows:1fr 1fr 1fr 1fr;
-    grid-template-columns:1fr;
-}
-
-.social > div{
-}
-
-.social > div:nth-child(1){
-    background:black;
     
+}
+
+
+.filters{
+    right: 0;
+    transform:translate(-10%, -50%);
+    display:flex;
+    /*border:solid 1px white;*/
+    justify-content: space-between;
+   top:100px;
+   width:200px;
+   color:white;
+   z-index:9;
+}
+
+.filters > div{
+    width:80px;
+    height:40px;
+    margin:20px auto;
+    font-size:25px;
+    text-align:center;
+    border:solid 1px black;
+    box-shadow:0 0 3px 2px white;
     color:white;
 }
 
-.social > div:nth-child(2){
-    background:rgb(36, 101, 199);
-    
+.carryFilter{
+    background:rgb(26, 0, 0);
 }
 
-.social > div:nth-child(3){
-    background:red;
-    
+.supportFilter{
+    background:rgb(49, 1, 41);
 }
 
-.social > div:nth-child(4){
+.carryFilter:hover, .supportFilter:hover, #on:hover, #off:hover{
+    cursor:pointer;
+} 
+
+#on:hover, #off:hover{
+    box-shadow: 0 0 2px 2px white;
+}
+
+.carryFilter:hover, .supportFilter:hover{
     background:white;
+    color:black;
 }
 
+
+/* ----------------------------------------------------------------------------------  Media Query-----------------------------------------------------*/
+
+@media screen and (max-width:1600px) {
+    .strength, .agilities, .intelligence{
+        display:grid;
+        height:800px;
+        width:1070px;
+        grid-template-columns:100px 100px 100px 100px 100px 100px 100px 100px 100px;
+        grid-template-rows:140px 140px 140px 140px;
+        gap:20px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .strength, .agilities, .intelligence{
+        display:grid;
+        height:1150px;
+        width:700px;
+        grid-template-columns:100px 100px 100px 100px 100px 100px;
+        grid-template-rows:140px 140px 140px 140px 140px 140px 140px 140px;
+        gap:20px;
+    }
+
+    .intelligence{
+        height: 1300px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .filters{
+        left:50%;
+        transform:translate(-50%,-100%);
+        width:250px;
+        top:100%;
+    }
+    #lower{
+        font-size:14px;
+        position:absolute;
+        top:110px;
+        width:90%;
+        left:50%;
+        transform:translateX(-50%);
+        height:40px;
+    }
+    .heroRoster{
+        margin-bottom:100px;
+    }
+    .strength, .agilities, .intelligence{
+        
+        width:430px;
+        grid-template-columns:130px 130px 130px;
+        grid-template-rows:150px 150px 150px 150px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        
+    }
+
+    .strength{
+        height:2450px;
+    }
+
+    .agilities{
+        height:2250px;
+    }
+
+    .intelligence{
+        height:2580px;
+        padding-bottom:50px;
+    }
+
+    
+    
+    img{
+        width:120px;
+        height:110px; /* can adjust to cover text*/
+        margin:0;
+    }
+    .frame{
+        
+        width:120px;
+        height:150px;  /*---*/
+    }
+    .buttonSet{
+        top:0px;
+    }
+}
+/* sized */
+@media screen and (max-width:500px) {
+    #projectTitle{
+        font-size:35px;
+        padding-top:5px;
+      }
+   
+    .strength, .agilities, .intelligence{
+        
+        width:335px;
+        grid-template-columns:150px 150px;
+        grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        column-gap:30px;
+    }
+
+    .strength{
+        height:4250px;
+    }
+
+    .agilities{
+        height:3700px;
+    }
+
+    .intelligence{
+        height:4300px;
+        
+    }
+
+    
+    
+    img{
+        width:150px;
+        height:130px; /* can adjust to cover text*/
+        
+    }
+    .frame{
+        
+        width:150px;
+        height:170px;
+    }
+
+    
+}
+
+@media screen and (max-width:400px) {
+    #projectTitle{
+        font-size:31px;
+        padding-top:8px;
+      }
+    #lower{
+        font-size:11.8px;
+    }
+    .heroRoster{
+        margin-bottom:100px;
+    }
+    .strength, .agilities, .intelligence{
+        
+        width:255px;
+        grid-template-columns:110px 110px;
+        grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        column-gap:30px;
+    }
+
+    .strength{
+        height:4050px;
+    }
+
+    .agilities{
+        height:3500px;
+    }
+
+    .intelligence{
+        height:4000px;
+        
+    }
+
+
+    img{
+        width:110px;
+        height:120px; /* can adjust to cover text*/
+        
+    }
+    .frame{
+        
+        width:110px;
+        height:160px;
+    }
+    
+}
+
+@media screen and (max-width:300px) {
+    #lower{
+        font-size:11px;
+        top:110px;
+    }
+    .heroRoster{
+        margin-bottom:100px;
+    }
+    .strength, .agilities, .intelligence{
+        width:205px;
+        grid-template-columns:95px 95px;
+        grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        column-gap:15px;
+    }
+
+    .strength{
+        height:3650px;
+    }
+
+    .agilities{
+        height:3300px;
+    }
+
+    .intelligence{
+        height:4000px;
+    }
+
+    
+    
+    img{
+        width:95px;
+        height:110px; /* can adjust to cover text*/
+        margin:0;
+    }
+    .frame{
+        
+        width:95px;
+        height:150px;  /*---*/
+        border:solid 2px white;
+    }
+}
+
+@media screen and (max-width:250px) {
+    #projectTitle{
+        font-size:25px;
+        padding-top:8px;
+      }
+}
 
