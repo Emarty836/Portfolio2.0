@@ -1,414 +1,941 @@
+*{
+    color:black;
+    margin:0;
+    padding:0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+:root{
+    --darkblue:rgb(17, 26, 50);
+    --lightblue:rgb(236, 239, 250);
+}
+
+@keyframes preview{
+    from{
+        width:20%;
+        height:20%;
+        opacity:.4;
+    }
+    to{
+        width:57%;
+        height:60%;
+        opacity:1;
+    }
+}
+
+
 body{
-    background:black;
-    margin: auto 0;
-}
-
-#projectTitle{
-    font-size:40px;
-  }
-  
-  #titleBar{
-    color:white;
-    width:100%;
-    height:180px;  /* Height of Navbar --------------------------------------*/
-    background: rgb(95, 0, 0);
-    margin:auto 0;
-    margin-top:-20px;
-    padding:0;
-    text-align: center;
-    text-transform: uppercase;
-    position:fixed;
-    z-index:9;
-  }
-
-
-  
-  #purpose{
-    display:flex;
-    justify-content:space-around;
-    padding:0;
-  }
-
-  #lower{
-    text-transform: capitalize;
-        position:absolute;
-        top:115px;
-        width:90%;
-        left:50%;
-        transform:translateX(-50%);
-  }
-
-  /* --------------------------------------------------------------------- Roster section ------------------------------------------------------------------*/
-
-  .heroRoster{
-    position:relative;
-    top:200px;  /*   Hero section distance from top --------------------------*/
-  }
-
-.strength, .agilities, .intelligence{
-    margin:20px auto;
-    width:1430px;
-    height:650px;
-    display:grid;
-    grid-template-columns:100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px;
-    grid-template-rows:140px 140px 140px 140px;
-    gap:20px;
-    padding:15px;
-    /*border:solid 1px white;  ----- for sizing width purposes*/
-    margin-bottom:60px;
-}
-
-
-.strength > .frame > p{
-    background:rgb(90, 7, 7);
-}
-
-.agilities > .frame > p{
-    background:rgb(24, 102, 24);
-}
-
-
-.intelligence > .frame > p{
-    background:rgb(9, 103, 119);
-}
-
-
-p{
-    width:100%;
-    height:40px;
-    color:white;
-    text-align:center;
-    font-family:arial;
-    margin:0;
-    margin-top:-5px;
-    padding-top:2px;
-}
-
-
-
-img{
-    width:100px;
-    height:100px; /* can adjust to cover text*/
-    margin:0;
-}
-.frame{
     
-    width:100px;
-    height:140px;  /*---*/
-    border:solid 2px white;
+    margin:0;
+    padding:0;
 }
 
-/* ----------------------------------------------------------------------------------- Button ----------------------------------------------------------------*/
-.buttonSet{
-    
-    width:110px;
-    height:50px;
-    background:grey;
+nav{
     display:flex;
     justify-content:space-between;
-    position:relative;
+    height:100px;
+    width:100%;
     align-items:center;
-    color:white;
-    font-family:arial;
-    top:10px;
-    z-index:1;
-    margin-top:80px;
-}
-
-.switch{
-    width:60px;
-    height:40px;
-  }
-
-#on{
-    background:rgb(26, 92, 26);
-    width:50px;
-    height:50px;
-}
-
-#off{
-    background:rgb(157, 8, 8);
-    width:50px;
-    height:50px;
-}
-
-/*---------------------------------------  filters ----------------------------------------------------------------------------------------------*/
-
-.carry{
-    opacity:.2;
-}
-
-.buttonSet, .filters{
+    background:var(--darkblue);
     position:fixed;
+    z-index:3;
+    border-bottom-color:var(--lightblue);
+    border-bottom-style:solid;
+    border-bottom-width:2px;
+}
+
+nav > div > a{
+    color:white;
+    text-decoration: none;
+    font-size:30px;
+    margin-left:30px;
+}
+
+
+ul{
+    display:flex;
+    justify-content:space-around;
+    width:40%;
+    height:50px;
+    right:0;
+    position:absolute;
+}
+/*
+li{
+    list-style-type:none;
+    font-size:30px;
+    color:white;
+}*/
+ul > a{
+    text-decoration:none;
+    font-size:30px;
+    color:white;
+}
+
+nav > ul > a:nth-child(3){
+    border:white solid 2px;
+    padding:5px 15px;
+    margin-top:-8px;
+}
+
+li > a{
+    color:white;
+    text-decoration: none;
+}
+
+/*------------------------------------- Intro -------------------------------*/
+
+.intro-div{
+    width:100%;
+    height:80vh;
+    background:rgb(236, 239, 250);
+    margin:0;
+}
+
+.intro{
+    position:absolute;
+    width:800px;
+    height:400px;
+   /*border:dashed 1px black;*/
+    top:25%;
+    margin-left:8%;
     
 }
 
-
-.filters{
-    right: 0;
-    transform:translate(-10%, -50%);
-    display:flex;
-    /*border:solid 1px white;*/
-    justify-content: space-between;
-   top:100px;
-   width:200px;
-   color:white;
-   z-index:9;
+.intro > h1{
+    font-size:55px;
+    border-right-style:solid;
+    border-right-color:black;
+    border-right-width:5px;
+    height:80px;
+    
+    padding-top:20px;
 }
 
-.filters > div{
-    width:80px;
-    height:40px;
-    margin:20px auto;
+.intro > h2{
     font-size:25px;
+    
+    padding-top:10px;
+}
+
+/*-------------------------------------------------Projects ------------------------------*/
+.projects{
+    background-color: rgb(17, 26, 50);
+    
+}
+
+.projects > h2{
     text-align:center;
+    color:white;
+    font-size:50px;
+    text-transform:uppercase;
+    text-shadow:10px 10px 100px black;
+    padding:40px;
+    
+}
+
+.project-grid{
+    width:950px;
+    height:830px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:30px;
+    grid-template-rows:250px 250px 250px;
+}
+
+.projectBanner{
+    box-shadow: inset 0 0 0 0 rgba(11, 25, 56, 0.85);
+    text-align:left;
+    font-size:20px;
+    width:100%;
+    font-family:Arial;
+    padding:0px;
+    line-height:10px;
+    height:50px;
+    position:Absolute;
+    border-bottom-color:transparent;
+    border-bottom-style:solid;
+    border-bottom-width:3px;
+    transition:background-color 1s, box-shadow .5s ease-in-out, border-color .3s ease-in;
+}
+
+.projectBanner > p{
+    padding-left:10px;
+    color:transparent;
+    padding-top:20px;
+    transition:color .5s;
+}
+
+.project-grid > div:hover .projectBanner>p{
+    color:rgb(211, 208, 208);
+}
+
+.project-grid > div:hover .projectBanner{
+    background:rgba(11, 25, 56, 0.85);
+    box-shadow: inset 500px 0 0 0 rgba(11, 25, 56, 0.85);
+    border-bottom-color:black;
+    transition:border-color 1s,background-color 1s, box-shadow .5s ease-in-out;
+}
+
+.project-grid > div{
+    border:2px solid black;
+    border-radius:5px;
+    width:100%;
+    background-size: contain; 
+    position:relative;
+    box-shadow:2px 2px 10px 0 black;
+    transition:border .5s;
+}
+
+.project-grid > div:hover{
+    border-color:white;
+}
+
+
+.project-grid > div:nth-child(1){
+    background-image:url('images/21pluscover.png');
+    background-size:102% 100%;
+}
+
+.project-grid > div:nth-child(2){
+    background-image:url('images/Dota2rosterImage.png');
+    background-size:102% 100%;
+}
+
+.project-grid > div:nth-child(3){
+    background-image:url('images/flicks.png');
+    background-size:102% 100%;
+}
+
+.project-grid > div:nth-child(4){
+    background-image:url('images/pokegen1.png');
+}
+
+.project-grid > div:nth-child(5){
+    background-image:url('images/pokegen2.png');
+}
+
+
+
+
+
+.view{
+    position:relative;
+    top:200px;
+    border:2px solid black;
+    margin:0 auto;
+    background:white;
+    cursor:pointer;
+    border-radius:2px;
+    width:180px;
+    height:25px;
+    text-align:center;
+    font-size:20px;
+    text-transform: uppercase;
+}
+
+.preview{
+    position:fixed;
+    display:flex;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
     border:solid 1px black;
-    box-shadow:0 0 3px 2px white;
+    width:57%;
+    height:60%;
+    visibility:hidden;
+    box-shadow:1px 1px 2px 0 black;
+    z-index:2;
+}
+
+.reveal{
+    animation-name:preview;
+    animation-duration:.3s;
+    animation-timing-function:ease-in;
+    visibility:visible;
+}
+.xBox:hover{
+    cursor:pointer;
+}
+
+.xBox{
+    position:absolute;
+    background:black;
+    width:20px;
+    height:20px;
+    margin:5px;
+    right:0;
+}
+
+.xBox > svg{
+    padding-left:2px;
+    padding-top:3px;
+}
+
+#P1 > .pLeft{
+    background-image:url('images/21pluscover.png');
+}
+
+#P2 > .pLeft{
+    background-image:url('images/Dota2rosterImage.png');
+}
+
+#P3 > .pLeft{
+    background-image:url('images/flicks.png');
+}
+
+#P4 > .pLeft{
+    background-image:url('images/pokegen1.png');
+    
+}
+
+#P5 > .pLeft{
+    background-image:url('images/pokegen2.png');
+    
+}
+
+.pLeft{
+    width:63%;
+    background:rgb(91, 30, 30);
+    background-size: 150% 100%;
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+}
+
+.pRight{
+    width:37%;
+    position:relative;
+    background-color: rgb(121, 147, 214);
+}
+.pRight>*{
+    text-align:left;   
+}
+
+.pRight > p > a{
+    color:rgb(255, 31, 31);
+    font-weight:bold;
+    text-decoration: none;
+    text-shadow:1px 1px #013147;
+}
+
+.link-flex{
+    display:flex;
+    position:absolute;
+    bottom:25px;
+    width:100%;
+    justify-content:space-around;
+    margin:0 auto;
+}
+
+.link-flex > a > div{
+    width:100%;
+    height:25px;
+    font-size:18px;
+    text-align:center;
+    padding:5px 10px;
+}
+
+.link-flex > a{
+    text-decoration:none;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.site{
+    background:rgb(139, 134, 134);
+    box-shadow:2px 2px 5px black;
+}
+
+.github{
+    background:black;
+    box-shadow:2px 2px 5px rgb(139, 134, 134);
     color:white;
 }
 
-.carryFilter{
-    background:rgb(26, 0, 0);
+/*-----------------------------------------------Post Projects 1 -----------------------------------------------------*/
+
+.contact{
+    width:100%;
+    height:400px;
+    background-color: rgb(236, 239, 250);
 }
 
-.supportFilter{
-    background:rgb(49, 1, 41);
+.contact-text{
+    font-size:30px;
+    width:60%;
+    position:relative;
+    top:45%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+}
+.contact-text > h2{
+    padding-bottom:10px;
 }
 
-.carryFilter:hover, .supportFilter:hover, #on:hover, #off:hover{
-    cursor:pointer;
-} 
 
-#on:hover, #off:hover{
-    box-shadow: 0 0 2px 2px white;
+/*--------------------------------------------------------------------  Social Links  ---------------------------------------------------------------------*/
+.social{
+    position:fixed;
+    left:0;
+    top:50%;
+    transform:translateY(-70%);
+    height:200px;
+    width:150px;
+    display:grid;
+    grid-template-rows:1fr 1fr 1fr;
+    grid-template-columns:1fr;
 }
 
-.carryFilter:hover, .supportFilter:hover{
-    background:white;
+.social:hover .zone{
+    opacity:1;
+    transition:opacity .7s;
+}
+
+.social-flex{
+    display:flex;
+}
+
+.social-flex > div:nth-child(1){
+    width:40%;
+}
+
+.social-flex > .zone{
+    width:60%;
+    align-items:center;
+    justify-content:center;
+    display:flex;
+    font-size:18px;
+    opacity:0;
+    transition:opacity .1s;
+    text-transform: uppercase;
+}
+
+.zone > span{
+    /*this will be responsive to scroll*/
     color:black;
 }
 
 
-/* ----------------------------------------------------------------------------------  Media Query-----------------------------------------------------*/
-
-@media screen and (max-width:1600px) {
-    .strength, .agilities, .intelligence{
-        display:grid;
-        height:800px;
-        width:1070px;
-        grid-template-columns:100px 100px 100px 100px 100px 100px 100px 100px 100px;
-        grid-template-rows:140px 140px 140px 140px;
-        gap:20px;
-    }
+.social-flex:nth-of-type(1) > div:nth-child(1){
+    background:white;
 }
 
+.social-flex:nth-of-type(2) > div:nth-child(1){
+    background:#0e76a8;
+}
+
+.social-flex:nth-of-type(3) > div:nth-child(1){
+    background:none;
+}
+
+svg{
+    padding:5px;
+}
+
+svg:nth-of-type(1){
+    padding-left:2px;
+}
+
+/* ---------------------------------------------------------- MEDIA QUERY ------------------------------------------------------------------------------------*/
 @media screen and (max-width:1200px) {
-    .strength, .agilities, .intelligence{
-        display:grid;
-        height:1150px;
-        width:700px;
-        grid-template-columns:100px 100px 100px 100px 100px 100px;
-        grid-template-rows:140px 140px 140px 140px 140px 140px 140px 140px;
-        gap:20px;
+    @keyframes preview{
+        from{
+            width:20%;
+            height:20%;
+            opacity:.4;
+        }
+        to{
+            width:75%;
+            height:60%;
+            opacity:1;
+        }
     }
 
-    .intelligence{
-        height: 1300px;
+    .project-grid{
+        width:675px; 
+        height:1950px; 
+        margin:0 auto;
+        display:grid;
+        grid-template-columns:675px;
+        gap:30px;
+        grid-template-rows:350px 350px 350px 350px 350px;
+    }
+
+    .project-grid > div:hover .projectBanner{
+        box-shadow: inset 675px 0 0 0 rgba(11, 25, 56, 0.85);
+    }
+
+    .view{
+        top:300px;
+    }
+
+    .project-grid > div:nth-child(4){
+        background-image:url('images/pokegen1.png');
+        background-size:100% 100%;
+    }
+    
+    .project-grid > div:nth-child(5){
+        background-image:url('images/pokegen2.png');
+        background-size:100% 100%;
+    }
+
+    .preview{
+        width:75%;
+    }
+
+    .link-flex > a > div{
+        width:90%;
+        height:25px;
+        font-size:16px;
+        text-align:center;
+        padding:5px 10px;
+    }
+    
+}
+
+@media screen and (max-width:950px){
+    @keyframes preview{
+        from{
+            width:20%;
+            height:20%;
+            opacity:.4;
+        }
+        to{
+            width:80%;
+            height:70%;
+            opacity:1;
+        }
+    }
+    ul{
+        right:5%;
+        width:60%;
+    }
+
+    .intro-div{
+        height:70vh;
+    }
+
+    .intro{
+        width:80%;
+    }
+
+    .intro > h1{
+        border-right-style:none;
+        border-bottom-style:solid;
+        border-bottom-color:var(--darkblue);
+        height:35%;
+    }
+    .intro > h2{
+        color:#013147;
+    }
+    .social{
+        top:60%;
+    }
+
+    .project-grid{
+        width:610px; 
+        grid-template-columns:610px;
+        grid-template-rows:350px 350px 350px 350px 350px;
+    }
+
+    .project-grid > div:hover .projectBanner{
+        box-shadow: inset 625px 0 0 0 rgba(11, 25, 56, 0.85);
+    }
+
+    .view{
+        top:290px; 
+    }
+
+    .preview{
+        width:80%;
+        height:70%;
+    }
+
+    .link-flex > a > div{
+        width:80%;
+        height:25px;
+        font-size:16px;
+        text-align:center;
+        padding:5px 10px;
+    }
+
+    .contact{
+        height:35vw;
     }
 }
 
-@media screen and (max-width:800px) {
-    .filters{
-        left:50%;
-        transform:translate(-50%,-100%);
-        width:250px;
-        top:100%;
+@media screen and (max-width:750px){
+    .project-grid{
+        width:500px; 
+        height:1750px; 
+        margin:0 auto;
+        display:grid;
+        grid-template-columns:500px;
+        gap:30px;
+        grid-template-rows:300px 300px 300px 300px 300px;
     }
-    #lower{
-        font-size:14px;
-        position:absolute;
-        top:110px;
+
+    .project-grid > div:hover .projectBanner{
+        box-shadow: inset 500px 0 0 0 rgba(11, 25, 56, 0.85);
+    }
+
+    .view{
+        top:250px;
+    }
+
+    .project-grid > div:nth-child(4){
+        background-image:url('images/pokegen1.png');
+        background-size:100% 100%;
+    }
+    
+    .project-grid > div:nth-child(5){
+        background-image:url('images/pokegen2.png');
+        background-size:100% 100%;
+    }
+
+    .preview{
+        flex-direction:column;
+        height:75%;
+        width:80%;
+        top:55%;
+    }
+
+    .pLeft{
+        width:100%;
+        height:50%;
+        background-size: 100% 100%;
+        background-position:50% 50%;
+    }
+    
+    .pRight{
+        width:100%;
+        height:50%;
+    }
+    
+    .link-flex{
+        bottom:10px;  
+    }
+}
+/*font size p change*/
+@media screen and (max-width:600px){
+    .project-grid{
+        width:440px; 
+        height:1700px; 
+        margin:0 auto;
+        display:grid;
+        grid-template-columns:440px;
+        gap:30px;
+        grid-template-rows:300px 300px 300px 300px 300px;
+    }
+
+    .contact-text{
+        font-size:5vw;
+    }
+    
+    .contact{
+        height:40vw;
+    }
+    .reveal{
+        animation-name:none;
+    }
+
+    .pRight>p{
+        font-size:15px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .project-grid{
+        width:380px; 
+        height:1500px; 
+        display:grid;
+        grid-template-columns:380px;
+        grid-template-rows:260px 260px 260px 260px 260px;
+    }
+
+    .view{
+        top:210px;
+    }
+    nav{
+        height:20vw;
+    }
+
+    nav > div{
+        display:none;
+    }
+
+    nav> ul{
+        display:flex;
         width:90%;
+        
         left:50%;
         transform:translateX(-50%);
+        height:10vw;
+    }
+
+    .intro-div{
+        height:130vw;
+    }
+    .intro{
+        top:40vw;
+    }
+
+    .intro > h1{
+        font-size:12vw;
+    }
+
+    .intro > h2{
+        font-size:6vw;
+    }
+    .zone, .zone>span{
+        display:none;
+    }
+    .pRight>p{
+        font-size:13px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .project-grid{
+        width:340px; 
+        height:1250px; 
+        display:grid;
+        grid-template-columns:340px;
+        grid-template-rows:210px 210px 210px 210px 210px;
+    }
+
+    .view{
+        top:165px;
+    }
+
+    ul > a{
+        font-size:7vw;
+    }
+
+    nav > ul > a:nth-child(3){
+        border:white solid 2px;
+        padding:5px 10px;
+        
+        margin-top:-2vw;
+    }
+
+    .intro > h1{
+        height:30%;
+    }
+
+    .projects > h2{
+        font-size:11vw;
+        padding:10vw;
+    }
+    .pLeft{
+        height:40%;
+    }
+    
+    .pRight{
+        height:60%;
+    }
+    .social{
+        border: solid 1px black;
+        display:fixed;
+        grid-template-rows:1fr;
+        grid-template-columns:1fr 1fr 1fr;
+        width:190px;
+        height:60px;
+        top:100%;
+        left:50%;
+        transform:translate(-50%,-100%);
+    }
+    .social-flex > div:nth-child(1){
+        width:100%;
+        height:60px;
+    }
+    .social-flex > div > a > img{
+        width:60px;
+        height:60px;
+    }
+    
+    
+    .social-icon > a > svg{
+        height:45px;
+        width:60px;
+    }
+    .contact{
+        height:50vw;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .projectBanner{
+        font-size:18px;
+        height:40px;
+        padding-bottom:5px;
+    }
+    .project-grid{
+        width:300px; 
+        height:1200px; 
+        display:grid;
+        grid-template-columns:300px;
+        grid-template-rows:200px 200px 200px 200px 200px;
+    }
+
+    .view{
+        top:160px;
+    }
+
+    .intro > h1{
+        height:25%;
+    }
+    .social{
+        width:165px;
+        height:50px;
+    }
+
+    .social-flex > div:nth-child(1){
+        width:100%;
+        height:50px;
+    }
+    .social-flex > div > a > img{
+        width:50px;
+        height:50px;
+    }
+    
+    .social-icon > a > svg{
+        height:35px;
+        width:50px;
+    }
+    .pRight>p{
+        font-size:12px;
+    }
+
+    .link-flex > a > div{
+        width:80%;
+        height:20px;
+        font-size:16px;
+        padding:5px 10px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .projectBanner{
+        font-size:16px;
+    }
+    .project-grid{
+        width:260px; 
+        height:1200px; 
+        display:grid;
+        grid-template-columns:260px;
+        grid-template-rows:200px 200px 200px 200px 200px;
+    }
+
+    .view{
+        top:160px;
+        width:160px;
+        font-size:19px;
+        height:24px;
+    }
+
+    .pRight>p{
+        font-size:14px;
+    }
+    .pLeft{
+        height:30%;
+    }
+    
+    .pRight{
+        height:70%;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .projectBanner{
+        font-size:14px;
+        height:45px;
+        padding-bottom:0px;
+        line-height:20px;
+    }
+    
+    .projectBanner > p{
+        padding:5px;
+    }
+    .project-grid{
+        width:210px; 
+        height:1200px; 
+        display:grid;
+        grid-template-columns:210px;
+        grid-template-rows:200px 200px 200px 200px 200px;
+    }
+
+    .view{
+        top:155px;
+        width:140px;
+        font-size:17px;
+        height:24px;
+    }
+
+    nav > ul > a:nth-child(3){
+        border:white solid 2px;
+        padding:5px 10px;
+        
+        margin-top:-2.5vw;
+    }
+
+    .intro > h1{
+        height:20%;
+    }
+
+    .social{
+        width:135px;
         height:40px;
     }
-    .heroRoster{
-        margin-bottom:100px;
-    }
-    .strength, .agilities, .intelligence{
-        
-        width:430px;
-        grid-template-columns:130px 130px 130px;
-        grid-template-rows:150px 150px 150px 150px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        
-    }
 
-    .strength{
-        height:2450px;
+    .social-flex > div:nth-child(1){
+        width:100%;
+        height:40px;
     }
-
-    .agilities{
-        height:2250px;
+    .social-flex > div > a > img{
+        width:40px;
+        height:40px;
     }
-
-    .intelligence{
-        height:2580px;
-        padding-bottom:50px;
-    }
-
     
-    
-    img{
-        width:120px;
-        height:110px; /* can adjust to cover text*/
-        margin:0;
+    .social-icon > a > svg{
+        height:25px;
+        width:40px;
     }
-    .frame{
-        
-        width:120px;
-        height:150px;  /*---*/
+    .pRight>p{
+        font-size:13px;
+        line-height:14px;
     }
-    .buttonSet{
-        top:0px;
+    .link-flex > a > div{
+        width:70%;
+        height:20px;
+        font-size:12px;
+        padding:4px 11px;
     }
 }
-/* sized */
-@media screen and (max-width:500px) {
-    #projectTitle{
-        font-size:35px;
-        padding-top:5px;
-      }
-   
-    .strength, .agilities, .intelligence{
-        
-        width:335px;
-        grid-template-columns:150px 150px;
-        grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        column-gap:30px;
+
+@media screen and (max-width:250px){
+    .project-grid{
+        width:150px; 
+        height:950px; 
+        display:grid;
+        grid-template-columns:150px;
+        grid-template-rows:150px 150px 150px 150px 150px;
     }
 
-    .strength{
-        height:4250px;
-    }
-
-    .agilities{
-        height:3700px;
-    }
-
-    .intelligence{
-        height:4300px;
-        
-    }
-
-    
-    
-    img{
-        width:150px;
-        height:130px; /* can adjust to cover text*/
-        
-    }
-    .frame{
-        
-        width:150px;
-        height:170px;
-    }
-
-    
-}
-
-@media screen and (max-width:400px) {
-    #projectTitle{
-        font-size:31px;
-        padding-top:8px;
-      }
-    #lower{
-        font-size:11.8px;
-    }
-    .heroRoster{
-        margin-bottom:100px;
-    }
-    .strength, .agilities, .intelligence{
-        
-        width:255px;
-        grid-template-columns:110px 110px;
-        grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        column-gap:30px;
-    }
-
-    .strength{
-        height:4050px;
-    }
-
-    .agilities{
-        height:3500px;
-    }
-
-    .intelligence{
-        height:4000px;
-        
-    }
-
-
-    img{
+    .view{
+        top:115px;
         width:110px;
-        height:120px; /* can adjust to cover text*/
-        
+        font-size:15px;
+        height:20px;
     }
-    .frame{
-        
-        width:110px;
-        height:160px;
+    .contact{
+        height:66vw;
     }
-    
-}
-
-@media screen and (max-width:300px) {
-    #lower{
-        font-size:11px;
-        top:110px;
+    .pRight>p{
+        font-size:12px;
+        line-height:12px;
     }
-    .heroRoster{
-        margin-bottom:100px;
-    }
-    .strength, .agilities, .intelligence{
-        width:205px;
-        grid-template-columns:95px 95px;
-        grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        column-gap:15px;
-    }
-
-    .strength{
-        height:3650px;
-    }
-
-    .agilities{
-        height:3300px;
-    }
-
-    .intelligence{
-        height:4000px;
-    }
-
-    
-    
-    img{
-        width:95px;
-        height:110px; /* can adjust to cover text*/
-        margin:0;
-    }
-    .frame{
-        
-        width:95px;
-        height:150px;  /*---*/
-        border:solid 2px white;
-    }
-}
-
-@media screen and (max-width:250px) {
-    #projectTitle{
-        font-size:25px;
-        padding-top:8px;
-      }
 }
 
