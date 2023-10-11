@@ -209,11 +209,13 @@ li > a{
 }
 
 .project-grid > div:nth-child(4){
-    background-image:url('images/pokegen1.png');
+    background-image:url('images/peacock.png');
+    background-size:cover;
 }
 
 .project-grid > div:nth-child(5){
     background-image:url('images/pokegen2.png');
+    background-size:cover;
 }
 
 
@@ -286,7 +288,7 @@ li > a{
 }
 
 #P4 > .pLeft{
-    background-image:url('images/pokegen1.png');
+    background-image:url('images/peacock.png');
     
 }
 
@@ -472,7 +474,7 @@ svg:nth-of-type(1){
     }
 
     .project-grid > div:nth-child(4){
-        background-image:url('images/pokegen1.png');
+        background-image:url('images/peacock.png');
         background-size:100% 100%;
     }
     
@@ -630,6 +632,14 @@ svg:nth-of-type(1){
         grid-template-rows:300px 300px 300px 300px 300px;
     }
 
+    .dotaText{
+        padding:3px;
+        line-height:20px;
+        padding-top:0px;
+        color:red;
+        margin-top:-12px;
+    }
+
     .contact-text{
         font-size:5vw;
     }
@@ -654,6 +664,9 @@ svg:nth-of-type(1){
         grid-template-columns:380px;
         grid-template-rows:260px 260px 260px 260px 260px;
     }
+    
+
+    
 
     .view{
         top:210px;
@@ -704,6 +717,17 @@ svg:nth-of-type(1){
         display:grid;
         grid-template-columns:340px;
         grid-template-rows:210px 210px 210px 210px 210px;
+    }
+    .projectBanner > p{
+        padding:9px;
+        line-height:20px;
+    }
+    .dotaText{
+        padding:3px;
+        line-height:20px;
+        padding-top:0px;
+        color:red;
+        margin-top:-7px;
     }
 
     .view{
@@ -779,7 +803,6 @@ svg:nth-of-type(1){
         grid-template-columns:300px;
         grid-template-rows:200px 200px 200px 200px 200px;
     }
-
     .view{
         top:160px;
     }
@@ -936,6 +959,12 @@ svg:nth-of-type(1){
     .pRight>p{
         font-size:12px;
         line-height:12px;
+    }
+
+    .projectBanner > p{
+        padding:9px;
+        line-height:12px;
+        font-size:10px;
     }
 }
 
