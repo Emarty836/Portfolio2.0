@@ -194,27 +194,27 @@ li > a{
 
 
 .project-grid > div:nth-child(1){
-    background-image:url('images/21pluscover.png');
+    background-image:url('21pluscover.png');
     background-size:102% 100%;
 }
 
 .project-grid > div:nth-child(2){
-    background-image:url('images/Dota2rosterImage.png');
+    background-image:url('Dota2rosterImage.png');
     background-size:102% 100%;
 }
 
 .project-grid > div:nth-child(3){
-    background-image:url('images/flicks.png');
+    background-image:url('flicks.png');
     background-size:102% 100%;
 }
 
 .project-grid > div:nth-child(4){
-    background-image:url('images/peacock.png');
+    background-image:url('peacock.png');
     background-size:cover;
 }
 
 .project-grid > div:nth-child(5){
-    background-image:url('images/pokegen2.png');
+    background-image:url('pokegen2.png');
     background-size:cover;
 }
 
