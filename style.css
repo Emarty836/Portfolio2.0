@@ -276,24 +276,24 @@ li > a{
 }
 
 #P1 > .pLeft{
-    background-image:url('images/21pluscover.png');
+    background-image:url('21pluscover.png');
 }
 
 #P2 > .pLeft{
-    background-image:url('images/Dota2rosterImage.png');
+    background-image:url('Dota2rosterImage.png');
 }
 
 #P3 > .pLeft{
-    background-image:url('images/flicks.png');
+    background-image:url('flicks.png');
 }
 
 #P4 > .pLeft{
-    background-image:url('images/peacock.png');
+    background-image:url('peacock.png');
     
 }
 
 #P5 > .pLeft{
-    background-image:url('images/pokegen2.png');
+    background-image:url('pokegen2.png');
     
 }
 
@@ -474,12 +474,12 @@ svg:nth-of-type(1){
     }
 
     .project-grid > div:nth-child(4){
-        background-image:url('images/peacock.png');
+        background-image:url('peacock.png');
         background-size:100% 100%;
     }
     
     .project-grid > div:nth-child(5){
-        background-image:url('images/pokegen2.png');
+        background-image:url('pokegen2.png');
         background-size:100% 100%;
     }
 
