@@ -1,3 +1,7 @@
+/* I need to replace the four link on the nax with its logo
+-photoshop each logo */
+
+
 *{
     color:black;
     margin:0;
@@ -22,7 +26,6 @@
         opacity:1;
     }
 }
-
 
 body{
     
@@ -55,7 +58,7 @@ nav > div > a{
 ul{
     display:flex;
     justify-content:space-around;
-    width:40%;
+    width:50%;
     height:50px;
     right:0;
     position:absolute;
@@ -72,11 +75,11 @@ ul > a{
     color:white;
 }
 
-nav > ul > a:nth-child(3){
+/* nav > ul > a:nth-child(4){
     border:white solid 2px;
     padding:5px 15px;
     margin-top:-8px;
-}
+} */
 
 li > a{
     color:white;
@@ -104,11 +107,7 @@ li > a{
 
 .intro > h1{
     font-size:55px;
-    border-right-style:solid;
-    border-right-color:black;
-    border-right-width:5px;
     height:80px;
-    
     padding-top:20px;
 }
 
@@ -194,27 +193,27 @@ li > a{
 
 
 .project-grid > div:nth-child(1){
-    background-image:url('21pluscover.png');
+    background-image:url('images/21pluscover.png');
     background-size:102% 100%;
 }
 
 .project-grid > div:nth-child(2){
-    background-image:url('Dota2rosterImage.png');
+    background-image:url('images/Dota2rosterImage.png');
     background-size:102% 100%;
 }
 
 .project-grid > div:nth-child(3){
-    background-image:url('flicks.png');
+    background-image:url('images/flicks.png');
     background-size:102% 100%;
 }
 
 .project-grid > div:nth-child(4){
-    background-image:url('peacock.png');
+    background-image:url('images/peacock.png');
     background-size:cover;
 }
 
 .project-grid > div:nth-child(5){
-    background-image:url('pokegen2.png');
+    background-image:url('images/pokegen2.png');
     background-size:cover;
 }
 
@@ -276,24 +275,24 @@ li > a{
 }
 
 #P1 > .pLeft{
-    background-image:url('21pluscover.png');
+    background-image:url('images/21pluscover.png');
 }
 
 #P2 > .pLeft{
-    background-image:url('Dota2rosterImage.png');
+    background-image:url('images/Dota2rosterImage.png');
 }
 
 #P3 > .pLeft{
-    background-image:url('flicks.png');
+    background-image:url('images/flicks.png');
 }
 
 #P4 > .pLeft{
-    background-image:url('peacock.png');
+    background-image:url('images/peacock.png');
     
 }
 
 #P5 > .pLeft{
-    background-image:url('pokegen2.png');
+    background-image:url('images/pokegen2.png');
     
 }
 
@@ -359,7 +358,7 @@ li > a{
 
 .contact{
     width:100%;
-    height:400px;
+    height:200px;
     background-color: rgb(236, 239, 250);
 }
 
@@ -474,12 +473,12 @@ svg:nth-of-type(1){
     }
 
     .project-grid > div:nth-child(4){
-        background-image:url('peacock.png');
+        background-image:url('images/peacock.png');
         background-size:100% 100%;
     }
     
     .project-grid > div:nth-child(5){
-        background-image:url('pokegen2.png');
+        background-image:url('images/pokegen2.png');
         background-size:100% 100%;
     }
 
@@ -523,15 +522,10 @@ svg:nth-of-type(1){
         width:80%;
     }
 
-    .intro > h1{
-        border-right-style:none;
-        border-bottom-style:solid;
-        border-bottom-color:var(--darkblue);
-        height:35%;
+    .intro{
+        left:2%;
     }
-    .intro > h2{
-        color:#013147;
-    }
+    
     .social{
         top:60%;
     }
@@ -564,11 +558,27 @@ svg:nth-of-type(1){
     }
 
     .contact{
-        height:35vw;
+        height:20vw;
+    }
+}
+
+@media screen and (max-width:870px){
+    .intro > h1{
+        height:40%;
     }
 }
 
 @media screen and (max-width:750px){
+    ul{
+        width:65%;
+    }
+    ul > a{
+        right:5%;
+        width:60%;
+        font-size:25px;
+        border:white 1px solid;
+    }
+
     .project-grid{
         width:500px; 
         height:1750px; 
@@ -588,12 +598,12 @@ svg:nth-of-type(1){
     }
 
     .project-grid > div:nth-child(4){
-        background-image:url('peacock.png');
+        background-image:url('images/peacock.png');
         background-size:100% 100%;
     }
     
     .project-grid > div:nth-child(5){
-        background-image:url('pokegen2.png');
+        background-image:url('images/pokegen2.png');
         background-size:100% 100%;
     }
 
@@ -645,7 +655,7 @@ svg:nth-of-type(1){
     }
     
     .contact{
-        height:40vw;
+        height:30vw;
     }
     .reveal{
         animation-name:none;
@@ -653,6 +663,10 @@ svg:nth-of-type(1){
 
     .pRight>p{
         font-size:15px;
+    }
+
+    .intro{
+        left:6%;
     }
 }
 
