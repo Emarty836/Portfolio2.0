@@ -210,40 +210,40 @@ li > a{
 }
 
 .project-grid > div:nth-child(1){
-    background-image:url('images/flicks.png');
+    background-image:url('flicks.png');
     background-size:102% 100%;
 }
 
 .project-grid > div:nth-child(2){
-    background-image:url('images/Dota2rosterImage.png');
+    background-image:url('Dota2rosterImage.png');
     background-size:102% 100%;
 }
 
 
 .project-grid > div:nth-child(3){
-    background-image:url('images/21pluscover.png');
+    background-image:url('21pluscover.png');
     background-size:102% 100%;
 }
 
 .project-grid > div:nth-child(4){
-    background-image:url('images/peacock.png');
+    background-image:url('peacock.png');
     background-size:cover;
 }
 
 .project-grid > div:nth-child(5){
-    background-image:url('images/pokegen2.png');
+    background-image:url('pokegen2.png');
     background-size:cover;
 }
 
 /* Copy and paste these to add images --------------------------------------------------------------update------------- */
 
 .project-grid > div:nth-child(6){
-    background-image:url('images/MacroCalcScreen.png');
+    background-image:url('MacroCalcScreen.png');
     background-size:450px 250px;
 }
 
 .project-grid > div:nth-child(7){
-    background-image:url('images/weatherCover.png');
+    background-image:url('weatherCover.png');
     background-size:cover;
 }
 
@@ -305,33 +305,33 @@ li > a{
 }
 
 #P1 > .pLeft{
-    background-image:url('images/flicks.png');
+    background-image:url('flicks.png');
 }
 
 #P2 > .pLeft{
-    background-image:url('images/Dota2rosterImage.png');
+    background-image:url('Dota2rosterImage.png');
 }
 
 #P3 > .pLeft{
-    background-image:url('images/21pluscover.png');
+    background-image:url('21pluscover.png');
 }
 
 #P4 > .pLeft{
-    background-image:url('images/peacock.png');
+    background-image:url('peacock.png');
 }
 
 #P5 > .pLeft{
-    background-image:url('images/pokegen2.png');
+    background-image:url('pokegen2.png');
 }
 
 /* copy and paste to add for preview ----------------------------------------------------update----------------- */
 
 #P6 > .pLeft{
-    background-image:url('images/MacroNutrientSquare.png');
+    background-image:url('MacroNutrientSquare.png');
 }
 
 #P7 > .pLeft{
-    background-image:url('images/weatherCover.png');
+    background-image:url('weatherCover.png');
 }
 
 .pLeft{
@@ -513,24 +513,24 @@ svg:nth-of-type(1){
     }
 
     .project-grid > div:nth-child(4){
-        background-image:url('images/peacock.png');
+        background-image:url('peacock.png');
         background-size:100% 100%;
     }
     
     .project-grid > div:nth-child(5){
-        background-image:url('images/pokegen2.png');
+        background-image:url('pokegen2.png');
         background-size:100% 100%;
     }
 
     
 
     .project-grid > div:nth-child(6){
-        background-image:url('images/MacroNutrientSquare.png');
+        background-image:url('MacroNutrientSquare.png');
         background-size:cover;
     }
 
     /* .project-grid > div:nth-child(7){
-        background-image:url('images/pokegen2.png');
+        background-image:url('pokegen2.png');
         background-size:100% 100%;
     } */
 
@@ -651,12 +651,12 @@ svg:nth-of-type(1){
     }
 
     .project-grid > div:nth-child(4){
-        background-image:url('images/peacock.png');
+        background-image:url('peacock.png');
         background-size:100% 100%;
     }
     
     .project-grid > div:nth-child(5){
-        background-image:url('images/pokegen2.png');
+        background-image:url('pokegen2.png');
         background-size:100% 100%;
     }
 
