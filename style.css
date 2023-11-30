@@ -151,12 +151,14 @@ li > a{
 
 .project-grid{
     width:950px;
-    height:830px;
+    height:1230px;
+    /* height change ---------------------------------------------------------------------------- update----------------*/
     margin:0 auto;
     display:grid;
     grid-template-columns:repeat(2, 1fr);
     gap:30px;
-    grid-template-rows:250px 250px 250px;
+    grid-template-rows:250px 250px 250px 250px;  
+    /* g-t-r Changed due to adding projects ------------------------------------------------------ update-----------------*/
 }
 
 .projectBanner{
@@ -207,29 +209,41 @@ li > a{
     border-color:white;
 }
 
-
 .project-grid > div:nth-child(1){
-    background-image:url('21pluscover.png');
+    background-image:url('images/flicks.png');
     background-size:102% 100%;
 }
 
 .project-grid > div:nth-child(2){
-    background-image:url('Dota2rosterImage.png');
+    background-image:url('images/Dota2rosterImage.png');
     background-size:102% 100%;
 }
 
+
 .project-grid > div:nth-child(3){
-    background-image:url('flicks.png');
+    background-image:url('images/21pluscover.png');
     background-size:102% 100%;
 }
 
 .project-grid > div:nth-child(4){
-    background-image:url('peacock.png');
+    background-image:url('images/peacock.png');
     background-size:cover;
 }
 
 .project-grid > div:nth-child(5){
-    background-image:url('pokegen2.png');
+    background-image:url('images/pokegen2.png');
+    background-size:cover;
+}
+
+/* Copy and paste these to add images --------------------------------------------------------------update------------- */
+
+.project-grid > div:nth-child(6){
+    background-image:url('images/MacroCalcScreen.png');
+    background-size:450px 250px;
+}
+
+.project-grid > div:nth-child(7){
+    background-image:url('images/weatherCover.png');
     background-size:cover;
 }
 
@@ -291,25 +305,33 @@ li > a{
 }
 
 #P1 > .pLeft{
-    background-image:url('21pluscover.png');
+    background-image:url('images/flicks.png');
 }
 
 #P2 > .pLeft{
-    background-image:url('Dota2rosterImage.png');
+    background-image:url('images/Dota2rosterImage.png');
 }
 
 #P3 > .pLeft{
-    background-image:url('flicks.png');
+    background-image:url('images/21pluscover.png');
 }
 
 #P4 > .pLeft{
-    background-image:url('peacock.png');
-    
+    background-image:url('images/peacock.png');
 }
 
 #P5 > .pLeft{
-    background-image:url('pokegen2.png');
-    
+    background-image:url('images/pokegen2.png');
+}
+
+/* copy and paste to add for preview ----------------------------------------------------update----------------- */
+
+#P6 > .pLeft{
+    background-image:url('images/MacroNutrientSquare.png');
+}
+
+#P7 > .pLeft{
+    background-image:url('images/weatherCover.png');
 }
 
 .pLeft{
@@ -472,12 +494,14 @@ svg:nth-of-type(1){
 
     .project-grid{
         width:675px; 
-        height:1950px; 
+        height:2750px; 
+        /* change height -------------------------------------------------------------------------------------------- update----------*/
         margin:0 auto;
         display:grid;
         grid-template-columns:675px;
         gap:30px;
-        grid-template-rows:350px 350px 350px 350px 350px;
+        grid-template-rows:350px 350px 350px 350px 350px 350px 350px;
+        /* simply add 350px rows -------------------------------------------------------------------------------------update --------*/
     }
 
     .project-grid > div:hover .projectBanner{
@@ -489,14 +513,26 @@ svg:nth-of-type(1){
     }
 
     .project-grid > div:nth-child(4){
-        background-image:url('peacock.png');
+        background-image:url('images/peacock.png');
         background-size:100% 100%;
     }
     
     .project-grid > div:nth-child(5){
-        background-image:url('pokegen2.png');
+        background-image:url('images/pokegen2.png');
         background-size:100% 100%;
     }
+
+    
+
+    .project-grid > div:nth-child(6){
+        background-image:url('images/MacroNutrientSquare.png');
+        background-size:cover;
+    }
+
+    /* .project-grid > div:nth-child(7){
+        background-image:url('images/pokegen2.png');
+        background-size:100% 100%;
+    } */
 
     .preview{
         width:75%;
@@ -549,7 +585,7 @@ svg:nth-of-type(1){
     .project-grid{
         width:610px; 
         grid-template-columns:610px;
-        grid-template-rows:350px 350px 350px 350px 350px;
+        grid-template-rows:350px 350px 350px 350px 350px 350px 350px;
     }
 
     .project-grid > div:hover .projectBanner{
@@ -592,17 +628,18 @@ svg:nth-of-type(1){
         /* right:5%;
         width:60%; */
         font-size:25px;
+        padding:2px 3vw;
         /* border:white 1px solid; */
     }
 
     .project-grid{
         width:500px; 
-        height:1750px; 
+        height:2350px; 
         margin:0 auto;
         display:grid;
         grid-template-columns:500px;
         gap:30px;
-        grid-template-rows:300px 300px 300px 300px 300px;
+        grid-template-rows:300px 300px 300px 300px 300px 300px 300px;
     }
 
     .project-grid > div:hover .projectBanner{
@@ -650,12 +687,12 @@ svg:nth-of-type(1){
 @media screen and (max-width:600px){
     .project-grid{
         width:440px; 
-        height:1700px; 
+        height:2400px;
         margin:0 auto;
         display:grid;
         grid-template-columns:440px;
         gap:30px;
-        grid-template-rows:300px 300px 300px 300px 300px;
+        grid-template-rows:300px 300px 300px 300px 300px 300px 300px;
     }
 
     .dotaText{
@@ -689,10 +726,10 @@ svg:nth-of-type(1){
 @media screen and (max-width: 550px){
     .project-grid{
         width:380px; 
-        height:1500px; 
+        height:2100px; 
         display:grid;
         grid-template-columns:380px;
-        grid-template-rows:260px 260px 260px 260px 260px;
+        grid-template-rows:260px 260px 260px 260px 260px 260px 260px;
     }
     
 
@@ -747,10 +784,10 @@ svg:nth-of-type(1){
 @media screen and (max-width: 450px){
     .project-grid{
         width:340px; 
-        height:1250px; 
+        height:1750px; 
         display:grid;
         grid-template-columns:340px;
-        grid-template-rows:210px 210px 210px 210px 210px;
+        grid-template-rows:210px 210px 210px 210px 210px 210px 210px;
     }
     .projectBanner > p{
         padding:9px;
@@ -832,10 +869,10 @@ svg:nth-of-type(1){
     }
     .project-grid{
         width:300px; 
-        height:1200px; 
+        height:1650px; 
         display:grid;
         grid-template-columns:300px;
-        grid-template-rows:200px 200px 200px 200px 200px;
+        grid-template-rows:200px 200px 200px 200px 200px 200px 200px;
     }
     .view{
         top:160px;
@@ -880,10 +917,10 @@ svg:nth-of-type(1){
     }
     .project-grid{
         width:260px; 
-        height:1200px; 
+        height:1650px; 
         display:grid;
         grid-template-columns:260px;
-        grid-template-rows:200px 200px 200px 200px 200px;
+        grid-template-rows:200px 200px 200px 200px 200px 200px 200px;
     }
 
     .view{
@@ -918,10 +955,10 @@ svg:nth-of-type(1){
     }
     .project-grid{
         width:210px; 
-        height:1200px; 
+        height:1600px; 
         display:grid;
         grid-template-columns:210px;
-        grid-template-rows:200px 200px 200px 200px 200px;
+        grid-template-rows:200px 200px 200px 200px 200px 200px 200px;
     }
 
     .view{
@@ -975,10 +1012,17 @@ svg:nth-of-type(1){
 @media screen and (max-width:250px){
     .project-grid{
         width:150px; 
-        height:950px; 
+        height:1250px; 
         display:grid;
         grid-template-columns:150px;
-        grid-template-rows:150px 150px 150px 150px 150px;
+        grid-template-rows:150px 150px 150px 150px 150px 150px 150px;
+    }
+    h3{
+        font-size:5px;
+    }
+
+    span{
+        font-size:10px;
     }
 
     .view{
